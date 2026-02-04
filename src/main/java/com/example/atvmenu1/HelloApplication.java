@@ -12,7 +12,6 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(
                 HelloApplication.class.getResource("/fxml/MainLayout.fxml")
         );
-
         Scene scene = new Scene(loader.load(), 800, 600);
         stage.setTitle("Sistema com Menu Fixo");
         stage.setScene(scene);

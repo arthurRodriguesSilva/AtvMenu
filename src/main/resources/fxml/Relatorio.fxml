@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="173.0" layoutY="21.0" text="Relatório de Vendas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView layoutX="286.0" layoutY="76.0" prefHeight="273.0" prefWidth="268.0" style="-fx-background-radius: 15;">
+         <columns>
+            <TableColumn prefWidth="92.0" text="Data" />
+            <TableColumn prefWidth="81.0" text="Venda" />
+            <TableColumn prefWidth="94.0" text="Total Venda" />
+         </columns>
+      </TableView>
+      <DatePicker layoutX="42.0" layoutY="118.0" />
+      <DatePicker layoutX="42.0" layoutY="188.0" />
+      <Label layoutX="42.0" layoutY="95.0" text="Data Inical" textFill="WHITE" />
+      <Label layoutX="42.0" layoutY="165.0" text="Data Final" textFill="WHITE" />
+      <Button layoutX="103.0" layoutY="255.0" mnemonicParsing="false" text="Buscar" />
+   </children>
+</Pane>

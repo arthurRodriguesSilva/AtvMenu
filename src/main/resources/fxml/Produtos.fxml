@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atvmenu1.controller.ProdutosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="286.0" layoutY="192.0" text="Produtos" />
+      <TextField layoutX="52.0" layoutY="86.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <Label layoutX="173.0" layoutY="21.0" text="Cadastro de Produtos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField layoutX="52.0" layoutY="150.0" promptText="Código" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <TextField layoutX="52.0" layoutY="220.0" promptText="Preço" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <TextField layoutX="52.0" layoutY="294.0" promptText="Quantidade em estoque" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <Line endX="63.0" layoutX="159.0" layoutY="110.0" startX="-100.0" stroke="#fffdfd" />
+      <Line endX="63.0" layoutX="159.0" layoutY="175.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="63.0" layoutX="159.0" layoutY="245.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="63.0" layoutX="159.0" layoutY="319.0" startX="-100.0" stroke="WHITE" />
+      <TableView layoutX="286.0" layoutY="76.0" prefHeight="273.0" prefWidth="268.0" style="-fx-background-radius: 15;">
+        <columns>
+          <TableColumn prefWidth="61.0" text="Produto" />
+          <TableColumn prefWidth="52.0" text="Código" />
+            <TableColumn prefWidth="55.0" text="Preço" />
+            <TableColumn prefWidth="95.0" text="Qntd estoque" />
+        </columns>
+      </TableView>
    </children>
-</AnchorPane>
+</Pane>
