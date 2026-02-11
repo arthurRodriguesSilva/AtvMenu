@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atvmenu1.controller.ProdutosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atvmenu1.controller.ProdutosController">
    <children>
-      <TextField fx:id="txtNome" layoutX="52.0" layoutY="86.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-      <Label layoutX="173.0" layoutY="21.0" text="Cadastro de Produtos" textFill="WHITE">
+      <TextField fx:id="txtNome" layoutX="52.0" layoutY="86.0" prefHeight="25.0" prefWidth="278.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <Label layoutX="323.0" layoutY="20.0" text="Cadastro de Produtos" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPreco" layoutX="52.0" layoutY="175.0" promptText="Preço" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-      <TextField fx:id="txtQtnd" layoutX="52.0" layoutY="279.0" promptText="Quantidade em estoque" style="-fx-background-color: transparent; -fx-text-fill: white;" />
-      <Line endX="63.0" layoutX="159.0" layoutY="110.0" startX="-100.0" stroke="#fffdfd" />
-      <Line endX="63.0" layoutX="159.0" layoutY="200.0" startX="-100.0" stroke="WHITE" />
-      <Line endX="63.0" layoutX="159.0" layoutY="304.0" startX="-100.0" stroke="WHITE" />
-      <TableView fx:id="tabelaProdutos" layoutX="286.0" layoutY="76.0" onMouseClicked="#selecionarItem" onSort="#atualizarTabela" prefHeight="273.0" prefWidth="268.0" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtPreco" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="278.0" promptText="Preço" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <TextField fx:id="txtQtnd" layoutX="52.0" layoutY="410.0" prefHeight="25.0" prefWidth="278.0" promptText="Quantidade em estoque" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+      <Line endX="170.0" layoutX="159.0" layoutY="110.0" startX="-100.0" stroke="#fffdfd" />
+      <Line endX="170.0" layoutX="156.0" layoutY="269.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="170.0" layoutX="156.0" layoutY="435.0" startX="-100.0" stroke="WHITE" />
+      <TableView fx:id="tabelaProdutos" layoutX="443.0" layoutY="78.0" onMouseClicked="#selecionarItem" onSort="#atualizarTabela" prefHeight="476.0" prefWidth="415.0" style="-fx-background-radius: 15;">
         <columns>
-          <TableColumn fx:id="colID" prefWidth="61.0" text="ID" />
-          <TableColumn fx:id="colNome" prefWidth="52.0" text="Produto" />
-            <TableColumn fx:id="colPreco" prefWidth="55.0" text="Preço" />
-            <TableColumn fx:id="colQtnd" prefWidth="95.0" text="Qntd estoque" />
+          <TableColumn fx:id="colID" prefWidth="97.0" text="ID" />
+          <TableColumn fx:id="colNome" prefWidth="103.0" text="Produto" />
+            <TableColumn fx:id="colPreco" prefWidth="99.0" text="Preço" />
+            <TableColumn fx:id="colQtnd" prefWidth="115.0" text="Qntd estoque" />
         </columns>
       </TableView>
-      <Button layoutX="32.0" layoutY="347.0" mnemonicParsing="false" onAction="#limparCampos" text="Limpar" />
-      <Button layoutX="117.0" layoutY="347.0" mnemonicParsing="false" onAction="#salvarProduto" text="Salvar" />
-      <Button layoutX="197.0" layoutY="347.0" mnemonicParsing="false" onAction="#excluirProduto" text="Excluir" />
+      <Button layoutX="59.0" layoutY="513.0" mnemonicParsing="false" onAction="#limparCampos" text="Limpar" />
+      <Button layoutX="199.0" layoutY="513.0" mnemonicParsing="false" onAction="#salvarProduto" text="Salvar" />
+      <Button layoutX="323.0" layoutY="513.0" mnemonicParsing="false" onAction="#excluirProduto" text="Excluir" />
    </children>
 </Pane>
