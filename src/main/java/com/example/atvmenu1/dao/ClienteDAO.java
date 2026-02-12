@@ -86,4 +86,31 @@ public class ClienteDAO {
             throw new RuntimeException("Erro ao deletar cliente: " + e.getMessage());
         }
     }
+
+    public Cliente buscarPorNome(String nome) {
+        String sql = "SELECT * FROM clientes WHERE nome = ?";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, nome);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return new Cliente(
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("cpf"),
+                        rs.getString("telefone"),
+                        rs.getString("email"),
+                        rs.getString("endereco")
+                );
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

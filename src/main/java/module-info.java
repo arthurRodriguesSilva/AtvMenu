@@ -4,6 +4,9 @@
 
     requires mysql.connector.j;
     requires java.sql;
+     requires protobuf.java;
+     requires jdk.jdi;
+     requires javafx.base;
 
 
      opens com.example.atvmenu1 to javafx.fxml;

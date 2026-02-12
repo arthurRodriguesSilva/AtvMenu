@@ -81,4 +81,32 @@ public class ProdutoDAO {
             throw new RuntimeException("Erro ao deletar produto: " + e.getMessage());
         }
     }
+
+    public Produto buscarPorNome(String nome) {
+
+        String sql = "SELECT * FROM produtos WHERE nome = ?";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, nome);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return new Produto(
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getDouble("preco"),
+                        rs.getInt("qtnd")
+                );
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 }
